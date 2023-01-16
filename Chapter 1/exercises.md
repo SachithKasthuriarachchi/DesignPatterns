@@ -18,6 +18,9 @@
 ### What is MVC Architecture?
 
 - MVC is Model-View-Controller architecture
+- Model is the application object. View is the screen representation of the UI and the controller defines how the view
+  reacts to user input.
+- Before MVC, people put M, V and C together when designing a user interface. MVC decoupled those
 
 ## Question 4:
 
@@ -45,22 +48,25 @@
 
 ### Write notes on Object, Methods, Requests.
 
-Object: Object handles requests via its methods.
+Object: Object handles requests via its methods. The only way an object executes an operation is via a request and
+operations are the only way that is capable of changing the object's internal state. Object encapsulates its data and
+operations.
 
 Methods: Methods handle requests. A method has a name, input parameters and output type which together known as the
 signature of a method.
-
-Requests:
 
 ## Question 8
 
 ### What is encapsulation?
 
-- Encapsulation is hiding implementation
+- Encapsulation describes binding data and operations which work on that data in a single unit.
 
 ## Question 9
 
 ### What is Facade and Flyweight patterns?
+
+- Facade pattern describes how to model complete subsystems as objects
+- Flyweight pattern describes supporting hugh number of objects at their finest granularities
 
 ## Question 10
 
@@ -74,12 +80,15 @@ Requests:
 ### Write notes on interfaces in Object oriented systems.
 
 - Interface defines the type of object.
+- Set of all the signatures of the object's operations is called the interface to the object.
 
 ## Question 12
 
 ### What is dynamic binding of an object?
 
-- Dynamic binding means that the object's binding to its implementation will happen at run-time and not at compile time.
+- Runtime association of a request to an object and one of its operation
+- Dynamic binding allows you to exchange one object for another object with same type at the runtime. (This is known as
+  polymorphism)
 
 ## Question 13
 
@@ -99,28 +108,31 @@ Requests:
 
 ### Define Mixin class
 
-- Mixin class provides additional functionalities to a class. Mixin class requires multiple inheritance
+- Mixin class provides optional functionalities or an interface to a class.
+- Mixin class requires multiple inheritance
+- Mixin class cannot be instantiated
 
 ## Question 16
 
 ### Name two techniques for reusing functionality in Object oriented systems.
 
-- Reusing with subclassing
-- Reusing with object composition
+- Reusing by subclassing
+- Reusing by object composition
 
 ## Question 17
 
 ### Define white-box reuse
 
-- Reusing with subclassing is known as white-box reuse since the derived class has the visibility to its parent class's
+- Reusing by subclassing is known as white-box reuse since the derived class has the visibility to its parent class's
   methods.
 
 ## Question 18
 
 ### Define black-box reuse
 
-- Reusing with object composition is known as black-box reuse. The resulting object does not have the visibility to
-  implementation details of the objects that the class is composed of.
+- Reusing with object composition is known as black-box reuse.
+- Objects are composed to get more complex functionality.
+- Internal details of objects are not exposed
 
 ## Question 19
 
@@ -128,26 +140,32 @@ Requests:
 
 - Subclass has the visibility to its parent class methods. Therefore, this breaks the encapsulation.
 - Class inheritance belongs to compile-time and it is static.
+- When we have to do some changes to the parent class, it may affect all the sub-classes too
 
 ## Question 20
 
 ### What is delegation?
 
-- In delegation , an object delegates its request to another objet which has appropriate methods to handle such
-  requests. Delegation includes redirects.
+- In delegation, an object delegates its request to another objet which has appropriate methods to handle such requests.
+- Delegation includes redirects.
+- Delegation involves two objects. Receiving object and the delegate object.
 
 ## Question 21
 
 ### What is the main advantage of delegation?
 
-- Reuse
+- It enables us to compose behaviours at runtime and to change the way they are composed
 
 ## Question 22
 
 ### What are all the disadvantages of delegation?
 
+- It may reduce the readability of the code
+
 ## Question 23
 
 ### Write notes on Acquaintance relationship of objects.
 
-- Acquaintance means an object has another object where both can survive without the other.
+- Acquaintance means two object can request functionalities from each other but, they are not responsible for each other.
+- It enables loose coupling compared to aggregation which tightly couples the object
+- In aquaintance, one object can survive without the other.
